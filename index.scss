@@ -33,12 +33,19 @@ $bebas: "Bebas Neue", cursive;
 /*  =============================FONTS========================== */
 
 /*  =============================TAG STYLE========================== */
-h1 {
+.h1 {
     text-align: center;
     text-transform: uppercase;
     font-family: $bebas;
     font-size: 4rem;
-    //font-weight: 400;
+    background-color: $color-principal;
+    color: white;
+    width: 70%;
+    border-radius: 20px 0 20px 0;
+    margin-left: 20px;
+    -webkit-box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
 }
 /*  =============================TAG STYLE========================== */
 
@@ -195,8 +202,8 @@ h1 {
         grid-area: header-content;
         width: auto;
         justify-content: center;
-        h1 {
-            background-color: #6c63ff;
+        .h1 {
+            background-color: $color-principal;
             color: white;
             width: 70%;
             border-radius: 20px 0 20px 0;
@@ -232,7 +239,7 @@ h1 {
             border: 1px solid black;
         }
         button:hover {
-            background-color: #6c63ff;
+            background-color: $color-principal;
             color: white;
             cursor: pointer;
         }
@@ -242,7 +249,7 @@ h1 {
     }
 }
 /* Header Media queries */
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
     .header {
         display: grid;
         width: 100%;
@@ -271,39 +278,49 @@ h1 {
 
 .main {
     margin-top: 100px;
+    .h1 {
+        display: block;
+        margin: 50px auto;
+
+    }
     .solutions {
         display: grid;
         gap: 5px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        grid-template: 
+        grid-template:
             "card-1"
             "card-2"
-            "card-3"
-        ;
+            "card-3";
         justify-content: center;
-        border: 1px solid black;
         .card-1 {
             grid-area: card-1;
             display: grid;
             grid-template-columns: 1fr;
             grid-column: 1fr;
-            grid-template-areas: 
+            grid-template-areas:
                 "img"
-                "p"
-            ;
-            justify-content: center;
-            align-items: center;
+                "p";
             padding: 10px;
-            border: 1px solid black;
             img {
+                grid-area: img;
+                display: block;
+                margin: auto;
                 height: auto;
                 max-width: 100%;
-                vertical-align: middle;
-                grid-area: img;
+                border-radius: 10px 10px 10px 10px;
             }
-            p{
+            p {
+                text-align: center;
                 grid-area: p;
+                margin: 20px auto;
+                span {
+                    color: $color-principal;
+                    font-family: $nonum-gotic;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
             }
         }
 
@@ -312,56 +329,48 @@ h1 {
             display: grid;
             grid-template-columns: 1fr;
             grid-column: 1fr;
-            grid-template-areas: 
+            grid-template-areas:
                 "img"
-                "p"
-            ;
+                "p";
             justify-content: center;
             align-items: center;
             padding: 10px;
-            border: 1px solid black;
             img {
                 height: auto;
                 max-width: 100%;
                 vertical-align: middle;
                 grid-area: img;
             }
-            p{
+            p {
                 grid-area: p;
             }
         }
-        
 
         .card-3 {
             grid-area: card-3;
             display: grid;
             grid-template-columns: 1fr;
             grid-column: 1fr;
-            grid-template-areas: 
+            grid-template-areas:
                 "img"
-                "p"
-            ;
+                "p";
             justify-content: center;
             align-items: center;
             padding: 10px;
-            border: 1px solid black;
             img {
                 height: auto;
                 max-width: 100%;
                 vertical-align: middle;
                 grid-area: img;
             }
-            p{
+            p {
                 grid-area: p;
             }
         }
     }
 }
 
-
-
 /*  =============================MAIN========================== */
-
 
 /* KEYFRAMES */
 
