@@ -40,14 +40,13 @@ h1 {
   display: grid;
   height: auto;
   width: 100%;
-      grid-template-areas: "navigation" "header" "main" "footer";
+      grid-template-areas: "navigation" "header" "main" "footer";
 }
 
 .initial-container .navigation {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: navigation;
-  background-color: #751bff;
 }
 
 .initial-container .header {
@@ -71,11 +70,12 @@ h1 {
 /*  =============================STRUCTURING GRID INITIAL-CONTAINER========================== */
 /*  =============================NAVIGATION========================== */
 .navigation {
+  background-color: #751bff;
   display: -ms-grid;
   display: grid;
   height: auto;
   width: 100%;
-      grid-template-areas: "logo" "nav";
+      grid-template-areas: "logo" "nav";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -203,7 +203,7 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-      grid-template-areas: "header-logo" "header-content";
+      grid-template-areas: "header-logo" "header-content";
 }
 
 .header .header-logo {
@@ -280,7 +280,7 @@ h1 {
 }
 
 /* Header Media queries */
-@media screen and (min-width: 768px) and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .header {
     display: -ms-grid;
     display: grid;
@@ -291,7 +291,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .header {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -307,86 +307,124 @@ h1 {
 /*  =============================HEADER========================== */
 /*  =============================MAIN========================== */
 .main {
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 100px;
 }
 
 .main .solutions {
   display: -ms-grid;
   display: grid;
   gap: 5px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  grid-template: "card-1 card-2 card-3";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-template: "card-1" "card-2" "card-3";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
 }
 
 .main .solutions .card-1 {
   grid-area: card-1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+      grid-template-areas: "img" "p";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .main .solutions .card-1 img {
-  width: 90%;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
 }
 
 .main .solutions .card-1 p {
-  text-align: center;
-  margin-left: 5px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: p;
 }
 
 .main .solutions .card-2 {
   grid-area: card-2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+      grid-template-areas: "img" "p";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .main .solutions .card-2 img {
-  width: 90%;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
 }
 
 .main .solutions .card-2 p {
-  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: p;
 }
 
 .main .solutions .card-3 {
   grid-area: card-3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+      grid-template-areas: "img" "p";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .main .solutions .card-3 img {
-  width: 90%;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
 }
 
 .main .solutions .card-3 p {
-  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: p;
 }
 
 /*  =============================MAIN========================== */
