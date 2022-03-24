@@ -37,7 +37,7 @@ $bebas: "Bebas Neue", cursive;
     text-align: center;
     text-transform: uppercase;
     font-family: $bebas;
-    font-size: 4rem;
+    font-size: 2.5rem;
     background-color: $color-principal;
     color: white;
     width: 70%;
@@ -47,6 +47,29 @@ $bebas: "Bebas Neue", cursive;
     -moz-box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
 }
+
+.button-primary {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    padding: 10px 30px 10px 30px;
+    font-size: 1.2rem;
+    font-family: $nonum-gotic;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    &:hover {
+        background-color: $color-principal;
+        color: white;
+        cursor: pointer;
+        border: 1px solid transparent;
+    }
+    & {
+        transition: background-color 0.2s ease-out;
+    }
+}
+
 /*  =============================TAG STYLE========================== */
 
 /*  =============================STRUCTURING GRID INITIAL-CONTAINER========================== */
@@ -96,26 +119,23 @@ $bebas: "Bebas Neue", cursive;
     grid-template-rows: 1fr;
 
     .logo {
-        text-align: start;
-        margin-left: 20px;
         grid-area: logo;
+        text-align: center;
         img {
-            max-width: 400px;
-            max-height: 400px;
+            max-width: auto;
         }
     }
 
     .nav {
-        text-align: center;
         grid-area: nav;
         ul {
             display: flex;
-            justify-content: start;
+            justify-content: center;
             flex-direction: row;
             flex-wrap: wrap;
             list-style: none;
             gap: 1.5em;
-            margin-left: 20px;
+            padding-left: 0px;
         }
         li {
             text-transform: capitalize;
@@ -153,6 +173,7 @@ $bebas: "Bebas Neue", cursive;
 
             ul {
                 justify-content: center;
+                padding-left: 20px;
 
                 li {
                     font-size: 1.3rem;
@@ -185,15 +206,22 @@ $bebas: "Bebas Neue", cursive;
     margin-top: 80px;
     width: 100%;
     justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
         "header-logo"
         "header-content";
 
     .header-logo {
         grid-area: header-logo;
-        margin: 20px;
+        //margin: 20px;
         img {
-            width: 100%;
+            display: block;
+            margin: auto;
+            height: auto;
+            width: 400px;
+            height: 400px;
+            max-width: 100%;
         }
     }
 
@@ -203,67 +231,28 @@ $bebas: "Bebas Neue", cursive;
         width: auto;
         justify-content: center;
         .h1 {
-            background-color: $color-principal;
-            color: white;
-            width: 70%;
-            border-radius: 20px 0 20px 0;
-            margin-left: 20px;
-            -webkit-box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
-            box-shadow: 6px 6px 16px -5px rgba(0, 0, 0, 0.75);
+            font-size: 2.5rem;
         }
         p {
             margin: 0;
             font-family: $nonum-gotic;
-            font-size: 2rem;
-        }
-        /*.switch {
-            display: block;
-            white-space: nowrap;
-            border-right: 2px solid;
-            width: 100%;
-            animation: typing 3s steps(30), blink 0.5s infinite step-end alternate;
-            overflow: hidden;
-        }*/
-        button {
-            display: block;
-            justify-content: center;
-            margin: auto;
-            margin-top: 100px;
-            padding: 10px 30px 10px 30px;
-            font-size: 1.2rem;
-            font-family: $nonum-gotic;
-            text-transform: uppercase;
-            background-color: transparent;
-            color: black;
-            border: 1px solid black;
-        }
-        button:hover {
-            background-color: $color-principal;
-            color: white;
-            cursor: pointer;
+            font-size: 1.5rem;
         }
         button {
-            transition: background-color 0.2s ease-out;
+            margin-top: 50px;
         }
     }
 }
 /* Header Media queries */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 972px) {
     .header {
         display: grid;
         width: 100%;
         justify-content: space-around;
         grid-template-areas: "header-logo header-content";
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .header {
-        justify-content: space-around;
         .header-content {
-            h1 {
-                font-size: 3rem;
+            .h1 {
+                font-size: 2.8rem;
             }
             p {
                 font-size: 1.5rem;
@@ -277,15 +266,15 @@ $bebas: "Bebas Neue", cursive;
 /*  =============================MAIN========================== */
 
 .main {
-    margin-top: 100px;
+    margin-top: 50px;
     .h1 {
         display: block;
         margin: 50px auto;
-
+        font-size: 2.5rem;
     }
     .solutions {
         display: grid;
-        gap: 5px;
+        gap: 50px 0px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template:
@@ -300,20 +289,23 @@ $bebas: "Bebas Neue", cursive;
             grid-column: 1fr;
             grid-template-areas:
                 "img"
-                "p";
-            padding: 10px;
+                "p"
+                "button";
             img {
                 grid-area: img;
                 display: block;
                 margin: auto;
                 height: auto;
+                width: 100%;
                 max-width: 100%;
-                border-radius: 10px 10px 10px 10px;
             }
             p {
-                text-align: center;
                 grid-area: p;
+                text-align: center;
                 margin: 20px auto;
+                font-family: $roboto-condensed;
+                font-size: 1.5em;
+                padding: 20px;
                 span {
                     color: $color-principal;
                     font-family: $nonum-gotic;
@@ -321,6 +313,10 @@ $bebas: "Bebas Neue", cursive;
                     font-weight: bold;
                     font-size: 1.2rem;
                 }
+            }
+            button {
+                grid-area: button;
+                font-size: 0.8rem;
             }
         }
 
@@ -331,18 +327,34 @@ $bebas: "Bebas Neue", cursive;
             grid-column: 1fr;
             grid-template-areas:
                 "img"
-                "p";
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
+                "p"
+                "button";
             img {
-                height: auto;
-                max-width: 100%;
-                vertical-align: middle;
                 grid-area: img;
+                display: block;
+                margin: auto;
+                height: auto;
+                width: 100%;
+                max-width: 100%;
             }
             p {
                 grid-area: p;
+                text-align: center;
+                margin: 20px auto;
+                font-family: $roboto-condensed;
+                font-size: 1.5em;
+                padding: 20px;
+                span {
+                    color: $color-principal;
+                    font-family: $nonum-gotic;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+            button {
+                grid-area: button;
+                font-size: 0.8rem;
             }
         }
 
@@ -353,37 +365,70 @@ $bebas: "Bebas Neue", cursive;
             grid-column: 1fr;
             grid-template-areas:
                 "img"
-                "p";
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
+                "p"
+                "button";
             img {
-                height: auto;
-                max-width: 100%;
-                vertical-align: middle;
                 grid-area: img;
+                display: block;
+                margin: auto;
+                height: auto;
+                width: 100%;
+                max-width: 100%;
             }
             p {
                 grid-area: p;
+                text-align: center;
+                margin: 20px auto;
+                font-family: $roboto-condensed;
+                font-size: 1.5em;
+                padding: 20px;
+                span {
+                    color: $color-principal;
+                    font-family: $nonum-gotic;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+            button {
+                grid-area: button;
+                font-size: 0.8rem;
             }
         }
     }
 }
 
-/*  =============================MAIN========================== */
-
-/* KEYFRAMES */
-
-/* typing text */
-/*@keyframes typing {
-    from {
-        width: 0;
+/* Media Queries Main */
+@media screen and (min-width: 768px) {
+    .main {
+        .solutions {
+            .card-1 {
+                margin: 20px;
+                padding: 0px 0px 20px 0px;
+                border: 1px solid rgb(139, 139, 139)
+            }
+            .card-2 {
+                margin: 20px;
+                padding: 0px 0px 50px 0px;
+                border: 1px solid rgb(139, 139, 139)
+            }
+            .card-3 {
+                margin: 20px;
+                padding: 0px 0px 20px 0px;
+                border: 1px solid rgb(139, 139, 139)
+            }
+        }
     }
 }
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
+@media screen and (min-width: 1280px) {
+    .main {
+        .solutions {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "card-1 card-2 card-3";
+        }
     }
-}*/
-/* typing text */
+}
+/* Media Queries Main */
+
+/*  =============================MAIN========================== */
