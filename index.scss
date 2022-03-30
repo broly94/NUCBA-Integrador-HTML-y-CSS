@@ -1,6 +1,8 @@
 /*  =============================GENERAL STYLES========================== */
 html {
     box-sizing: border-box;
+    min-height: 100%;
+    position: relative;
 }
 
 *,
@@ -276,7 +278,7 @@ $bebas: "Bebas Neue", cursive;
 /*  =============================MAIN========================== */
 
 .main {
-    margin-top: 50px;
+    margin: 100px 0px;
     .h1 {
         display: block;
         padding: 10px 0px;
@@ -749,16 +751,18 @@ $bebas: "Bebas Neue", cursive;
 
 /*  =============================MAIN========================== */
 
-
 /*  =============================FOOTER========================== */
 
 .footer {
     display: grid;
-    gap:3;
+    gap: 3;
     justify-content: center;
     background-color: $color-principal;
     font-family: $nonum-gotic;
     color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 /*  =============================FOOTER========================== */
@@ -767,17 +771,19 @@ $bebas: "Bebas Neue", cursive;
 .container-from {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "h2"
         "label"
         "input"
-        "button"
-    ;
-    margin: 20px auto;
+        "button";
+    margin: 0 auto;
+    margin-bottom: 100px;
     text-align: center;
     justify-content: center;
+    width: 100%;
     .form {
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
         .h1 {
             grid-area: h2;
             width: 100%;
@@ -786,13 +792,13 @@ $bebas: "Bebas Neue", cursive;
             color: white;
             border-radius: 0px;
         }
-    
+
         .label {
             grid-area: label;
             font-family: $bebas;
             font-size: 1.3rem;
         }
-    
+
         .input {
             grid-area: input;
             display: flex;
@@ -801,18 +807,18 @@ $bebas: "Bebas Neue", cursive;
             font-size: 1.5rem;
             font-family: $roboto-condensed;
         }
-    
+
         .button-primary {
             grid-area: button;
             margin-top: 20px;
         }
-    
 
+        textarea {
+            width: 100%;
+        }
     }
-
 }
 /*  =============================REGISTER========================== */
-
 
 /*  =============================LOGIN========================== */
 
