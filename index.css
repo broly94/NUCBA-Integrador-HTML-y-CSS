@@ -385,7 +385,7 @@ body {
 }
 
 .main .solutions .card-1 button {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: button;
   font-size: 0.8rem;
@@ -433,7 +433,7 @@ body {
 }
 
 .main .solutions .card-2 button {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: button;
   font-size: 0.8rem;
@@ -481,13 +481,13 @@ body {
 }
 
 .main .solutions .card-3 button {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: button;
   font-size: 0.8rem;
 }
 
-/* Media Queries Main */
+/* Mediaqueries Solutions Main */
 @media screen and (min-width: 768px) {
   .main .solutions .card-1 {
     margin: 20px;
@@ -520,8 +520,7 @@ body {
   }
 }
 
-/* Media Queries Main */
-/*  =============================MAIN========================== */
+/* Media Queries Solutions Main */
 /*  =============================BUSSINES========================== */
 .bussines {
   display: -ms-grid;
@@ -537,23 +536,24 @@ body {
   grid-area: services;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "logo content";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "content";
+  margin: 50px 0px 70px 0px;
 }
 
 .bussines .services .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .bussines .services .logo img {
-  width: 300px;
-  height: 300;
+  width: 200px;
+  height: 200;
   max-width: 100%;
 }
 
@@ -567,22 +567,25 @@ body {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bussines .services .content .h2 {
-  margin-top: 50px;
-  margin-bottom: 0px;
   -webkit-box-shadow: 0px;
           box-shadow: 0px;
-  font-size: 4rem;
+  margin: 20px auto;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-size: 2.2rem;
 }
 
 .bussines .services .content p {
-  font-size: 5rem;
-  margin: 0px 0px 0px 180px;
+  font-size: 3rem;
+  margin: 0 auto;
   font-family: "Nanum Gothic", sans-serif;
 }
 
@@ -592,23 +595,24 @@ body {
   grid-area: clients;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "logo content";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "content";
+  margin: 70px 0px 70px 0px;
 }
 
 .bussines .clients .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .bussines .clients .logo img {
-  width: 300px;
-  height: 300;
+  width: 200px;
+  height: 200;
   max-width: 100%;
 }
 
@@ -622,22 +626,25 @@ body {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bussines .clients .content .h2 {
-  margin-top: 50px;
-  margin-bottom: 0px;
   -webkit-box-shadow: 0px;
           box-shadow: 0px;
-  font-size: 4rem;
+  margin: 20px auto;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-size: 2.2rem;
 }
 
 .bussines .clients .content p {
-  font-size: 5rem;
-  margin: 0px 0px 0px 180px;
+  font-size: 3rem;
+  margin: 0 auto;
   font-family: "Nanum Gothic", sans-serif;
 }
 
@@ -647,25 +654,25 @@ body {
   grid-area: projects;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "logo content";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "content";
+  margin: 70px 0px 70px 0px;
 }
 
 .bussines .projects .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .bussines .projects .logo img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200;
   max-width: 100%;
-  max-height: auto;
 }
 
 .bussines .projects .content {
@@ -678,24 +685,274 @@ body {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bussines .projects .content .h2 {
-  margin-top: 50px;
-  margin-bottom: 0px;
   -webkit-box-shadow: 0px;
           box-shadow: 0px;
-  font-size: 4rem;
+  margin: 20px auto;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-size: 2.2rem;
 }
 
 .bussines .projects .content p {
-  font-size: 5rem;
-  margin: 0px 0px 0px 180px;
+  font-size: 3rem;
+  margin: 0 auto;
   font-family: "Nanum Gothic", sans-serif;
 }
 
+/* Mediaqueries Bussines Main */
+@media screen and (min-width: 768px) {
+  .main .bussines .services {
+        grid-template-areas: "logo content";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .main .bussines .services .logo {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .main .bussines .services .content .h2 {
+    border: 0px;
+    margin: 0px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .main .bussines .services .content p {
+    margin: 0px 0px 0px 120px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .main .bussines .clients {
+        grid-template-areas: "logo content";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .main .bussines .clients .logo {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .main .bussines .clients .content .h2 {
+    border: 0px;
+    margin: 0px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .main .bussines .clients .content p {
+    margin: 0px 0px 0px 120px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .main .bussines .projects {
+        grid-template-areas: "logo content";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .main .bussines .projects .logo {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .main .bussines .projects .content .h2 {
+    border: 0px;
+    margin: 0px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .main .bussines .projects .content p {
+    margin: 0px 0px 0px 120px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main .bussines {
+        grid-template-areas: "services clients projects";
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main .bussines .services {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: services;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo" "content";
+    gap: 3em;
+  }
+  .main .bussines .services .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .bussines .services .content {
+    margin: 0px;
+  }
+  .main .bussines .services .content .h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    border: 0px;
+    margin: 0px;
+  }
+  .main .bussines .services .content p {
+    margin: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .main .bussines .clients {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: clients;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo" "content";
+    gap: 3em;
+  }
+  .main .bussines .clients .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .bussines .clients .content {
+    margin: 0px;
+  }
+  .main .bussines .clients .content .h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    border: 0px;
+    margin: 0px;
+  }
+  .main .bussines .clients .content p {
+    margin: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .main .bussines .projects {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: projects;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo" "content";
+    gap: 3em;
+  }
+  .main .bussines .projects .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .bussines .projects .content {
+    margin: 0px;
+  }
+  .main .bussines .projects .content .h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    border: 0px;
+    margin: 0px;
+  }
+  .main .bussines .projects .content p {
+    margin: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+/* Mediaqueries Bussines Main */
 /*  =============================BUSSINES========================== */
+/*  =============================MAIN========================== */
+/*  =============================FOOTER========================== */
+.footer {
+  display: -ms-grid;
+  display: grid;
+  gap: 3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #751bff;
+  font-family: "Nanum Gothic", sans-serif;
+  color: white;
+}
+
+/*  =============================FOOTER========================== */
+/*  =============================REGISTER========================== */
+.container-from {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "h2" "label" "input" "button";
+  margin: 20px auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-from .form {
+  width: 100%;
+}
+
+.container-from .form .h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h2;
+  width: 100%;
+  margin: 20px 0px;
+  background-color: #751bff;
+  color: white;
+  border-radius: 0px;
+}
+
+.container-from .form .label {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: label;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.3rem;
+}
+
+.container-from .form .input {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: input;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.container-from .form .button-primary {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: button;
+  margin-top: 20px;
+}
+
+/*  =============================REGISTER========================== */
+/*  =============================LOGIN========================== */
+/*  =============================LOGIN========================== */
 /*# sourceMappingURL=index.css.map */
